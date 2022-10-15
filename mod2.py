@@ -21,10 +21,11 @@ def _max(numbers):
 
 
 def _sum(numbers):
-    s = 0
-    for item in numbers:
-        s += item
-    return s
+    # s = 0
+    # for item in numbers:
+    #     s += item
+    # return s
+    return 0
 
 
 def _mult(numbers):
