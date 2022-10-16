@@ -1,22 +1,15 @@
 import sys
+import unittest
+
 from io import StringIO
-from unittest import TestCase, main
 
 import main as my_program
-
-TEST_FILE_NAME = "out/test.txt"
-test_list = [-55, 7, -30, -2, 23]
-test_result = """
-Мин: -55
-Макс: 23
-Произведение: -531300
-Сумма: -57
-"""
+from constants import TEST_FILE_NAME, TEST_LIST, TEST_RESULT
 
 
-class MainTest(TestCase):
+class MainTest(unittest.TestCase):
     def test_main(self):
-        test_content = " ".join(str(item) for item in test_list)
+        test_content = " ".join(str(item) for item in TEST_LIST)
 
         with open(TEST_FILE_NAME, "w") as file:
             file.write(test_content)
@@ -31,8 +24,8 @@ class MainTest(TestCase):
 
         result = fake_stdout.getvalue()
 
-        self.assertEqual(result.strip(), test_result.strip())
+        self.assertEqual(result.strip(), TEST_RESULT.strip())
 
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
