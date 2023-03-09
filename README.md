@@ -1,4 +1,6 @@
-# Техническое задание 2.
+# Калькулятор.
+
+Проект калькулятора с настроенным CI/CD и unit/performance тестами.
 
 ![](https://github.com/hishasha/tp-hw-2/actions/workflows/ci.yml/badge.svg?branch=master)
 
@@ -19,4 +21,4 @@
 
 График отображающий время, затраченное на время работы программы в зависимости от количества чисел во входном файле:
 
-![](./images/graph.jpg)
+![](./graph.jpg)
